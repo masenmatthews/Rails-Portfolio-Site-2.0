@@ -1,0 +1,12 @@
+<section>
+  <h2 class="login-page-head">Sign in</h2>
+    <p class="main-paragraph-text">Welcome back! Please sign in to continue</p>
+    <br>
+  <%= form_tag signin_path do %>
+    <%= label_tag :email %>
+    <%= text_field_tag :email %>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+    <%= submit_tag "Sign in" %>
+  <% end %>
+</section>

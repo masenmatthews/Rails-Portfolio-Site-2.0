@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-  before_action :authorize, only: [:new]
 
   def index
     @posts = Post.all
@@ -13,7 +12,7 @@ class PostsController < ApplicationController
     @user = User.find(session[:user_id])
     @post = @user.posts.new(post_params)
     if @post.save
-      flash[:notice] = "Thanks, your post is has been added to the list!"
+      flash[:notice] = "Thanks, your post has been added to the list!"
       redirect_to posts_path
     else
       render :new

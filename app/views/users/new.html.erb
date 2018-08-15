@@ -1,0 +1,20 @@
+<section>
+  <h2 class="login-page-head"> Sign up</h2>
+    <p class="main-paragraph-text">Create an account to join the conversation!</p>
+    <br>
+    <%= form_for @user do |f| %>
+    <%= f.label "Username" %>
+    <%= f.text_field :username %>
+    <br>
+    <%= f.label "Email address" %>
+    <%= f.text_field :email %>
+    <br>
+    <%= f.label "Password" %>
+    <%= f.password_field :password %>
+    <br>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+    <br>
+    <%= f.submit "Sign Up" %>
+  <% end %>
+</section>
