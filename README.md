@@ -5,8 +5,8 @@
 ### By Masen Matthews
 
 ## Description
-  This site is being built to replace the portfolio site that I made in code school. I could have gone through the old site and torn out a bunch of code, but I'd rather start from scratch and make better design, feature, and content choices along the way. 
-  
+  This site is being built to replace the portfolio site that I made in code school. I could have gone through the old site and torn out a bunch of code, but I'd rather start from scratch and make better design, feature, and content choices along the way.
+
 ## Accessibility
 
 ## Setup/Installation Requirements
@@ -14,6 +14,7 @@
 ## Future expansion
 
 ## Technologies Used
+  * Bulma (for CSS)
 
 ## Known Bugs and Issues
 
