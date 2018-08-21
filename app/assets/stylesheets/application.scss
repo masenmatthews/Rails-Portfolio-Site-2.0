@@ -3,7 +3,10 @@
 @import "bootstrap";
 @import "bulma";
 
-.content {
-  text-align: center;
-  // background-color: grey;
+.navbar {
+  background-color: black;
+}
+
+.navbar a {
+  color: white;
 }
