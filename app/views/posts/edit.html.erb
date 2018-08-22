@@ -1,6 +1,16 @@
-<h1>Editing Post</h1>
+<section class="section">
+  <h2>Editing Post</h2>
 
-<%= render 'form', post: @post %>
+  <%= render 'form', post: @post %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+  <%= link_to 'Show', @post %> |
+  <%= link_to 'Back', posts_path %>
+
+</section>
+<!-- 
+<%= render "posts/form" %>
+<p><%= link_to "Delete", post_path(@post),
+  :data =>
+    {:confirm => "Are you sure?",
+     :method => "delete"} %></p>
+<p><%= link_to "Return to product page", post_path %><p> -->

@@ -1,5 +1,8 @@
-<section class="section">
+<div class="content has-text-centered">
+  <h1 class="title">Blog</h1>
+</div>
 
+<section class="section">
   <tbody>
     <% @posts.each do |post| %>
       <tr>
@@ -12,6 +15,8 @@
 </table>
 <br>
 </section>
+
+
 <%= link_to 'New Post', new_post_path %>
 
 

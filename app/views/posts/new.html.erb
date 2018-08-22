@@ -1,5 +1,7 @@
-<h1>New Post</h1>
+<section class="section">
+  <h2>New post</h2>
+  <%= render 'form', post: @post %>
+  <%= link_to 'Back', posts_path %>
+</section>
 
-<%= render 'form', post: @post %>
-
-<%= link_to 'Back', posts_path %>
+<!-- # <%= render "posts/form" %> -->
