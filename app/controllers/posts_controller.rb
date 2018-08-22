@@ -1,11 +1,17 @@
 class PostsController < ApplicationController
-
+  before_action :authorize, only: [:new, :create, :edit, :destroy, :update]
+  
   def index
     @posts = Post.all
   end
 
   def new
-    @post = Post.new
+    @user = User.find(session[:user_id])
+    if @user.admin?
+      @post = Post.new
+    else
+      redirect '/'
+    end
   end
 
   def create
