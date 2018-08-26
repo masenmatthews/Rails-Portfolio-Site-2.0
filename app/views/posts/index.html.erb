@@ -2,18 +2,21 @@
   <h1 class="title">Blog</h1>
 </div>
 
-<section class="section">
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
-</section>
-
+  <section class="section">
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= link_to 'Show', post %></td>
+          <td><%= link_to 'Edit', edit_post_path(post) %></td>
+          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  </section>
+  
+<% if current_user.try(:admin?) %>
   <%= link_to 'New Post', new_post_path %>
+<% end %>
+
