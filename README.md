@@ -14,6 +14,8 @@
 ## Future expansion
 
 ## Technologies Used
+  * Ruby On Rails
+  * Devise (for authentication)
   * Bulma (for CSS)
 
 ## Known Bugs and Issues
