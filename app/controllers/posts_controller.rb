@@ -1,13 +1,13 @@
 class PostsController < ApplicationController
   before_action :authorize, only: [:new, :create, :edit, :destroy, :update]
-  
+
   def index
     @posts = Post.all
   end
 
   def new
-    @user = User.find(session[:user_id])
-    if @user.admin?
+    # checks for admin privelages before allowing for post
+    if current_user.admin?
       @post = Post.new
     else
       redirect '/'
@@ -27,7 +27,6 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @comments = @post.comments
   end
 
   def edit

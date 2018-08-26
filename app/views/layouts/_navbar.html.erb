@@ -6,16 +6,15 @@
       <ul class="nav navbar-nav">
         <li><%= link_to "Home", "/" %></li>
         <li><%= link_to "Blog", posts_path %></li>
-        <li><%= link_to "Projects" %></li>
+        <li><%= link_to "Projects", projects_path %></li>
         <li><%= link_to "About" %></li>
         <li><%= link_to "Contact" %></li>
-        <!-- <% if current_user %>
+        <% if current_user %>
          <li><%= link_to "Sign out", '/signout' %></li>
          <li><%=link_to "Hi, #{current_user.username}" %></li>
         <% else %>
-         <li><%= link_to "Sign up", '/signup' %></li>
-         <li><%= link_to "Sign in", '/signin' %></li>
-        <% end %> -->
+         <li><%= link_to "Admin", '/signin' %></li>
+        <% end %>
       </ul>
     </div>
   </div>
