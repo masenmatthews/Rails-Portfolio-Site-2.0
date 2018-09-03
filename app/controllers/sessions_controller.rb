@@ -1,8 +1,10 @@
 class SessionsController < ApplicationController
+  before_action :authenticate_user!
+
   def create
     @user = User.authenticate(params[:email], params[:password])
     if @user
-      flash[:notice] = "Sign in successful!"
+      flash[:notice] = "You've signed in."
       session[:user_id] = @user.id
       redirect_to "/"
     else
@@ -13,7 +15,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    flash[:notice] = "Sign out successful!"
+    flash[:notice] = "You've signed out."
     redirect_to "/"
   end
 end

@@ -1,17 +1,10 @@
 class PostsController < ApplicationController
-  before_action :authorize, only: [:new, :create, :edit, :destroy, :update]
-
   def index
     @posts = Post.all
   end
 
   def new
-    # checks for admin privelages before allowing for post
-    if current_user.admin?
-      @post = Post.new
-    else
-      redirect '/'
-    end
+    @post = Post.new
   end
 
   def create

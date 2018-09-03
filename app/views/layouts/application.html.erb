@@ -11,9 +11,9 @@
 
   <body>
     <%= render 'layouts/navbar' %>
-    <%= flash[:alert] %>
-    <%= flash[:notice] %>
     <div class="container">
+      <div class="alert alert-info"><%= notice %></div>
+      <div class="alert alert-warning"><%= alert %></div>
       <%= yield %>
     </div>
       <%= render 'layouts/footer' %>

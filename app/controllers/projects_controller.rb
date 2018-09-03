@@ -6,12 +6,7 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    # checks for admin privelages before allowing for project
-    if current_user.admin?
-      @project = Project.new
-    else
-      redirect '/'
-    end
+    @project = Project.new
   end
 
   def create
