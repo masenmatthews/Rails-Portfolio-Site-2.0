@@ -12,10 +12,4 @@ class SessionsController < ApplicationController
       redirect_to signin_path
     end
   end
-
-  def destroy
-    session[:user_id] = nil
-    flash[:notice] = "You've signed out."
-    redirect_to "/"
-  end
 end
